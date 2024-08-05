@@ -9,6 +9,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+// Part 1: Create the data for a book in an online store
+const bookTitle = "The Lord of the Javascript";
+const bookAuthor = "Mario";
+let bookRating = 4.2;
+let bookSales = 120;
 
 // --^-- write your code here --^--
 
@@ -26,6 +31,19 @@ Then log all variables to the console again.
 
 // --v-- write your code here --v--
 
+console.log(`Title: ${bookTitle}`);
+console.log(`Author: ${bookAuthor}`);
+console.log(`Rating: ${bookRating}`);
+console.log(`Sales: ${bookSales}`);
+
+bookSales += 10;
+bookRating = 4.5;
+
+console.log(`Title: ${bookTitle}`);
+console.log(`Author: ${bookAuthor}`);
+console.log(`Rating: ${bookRating}`);
+console.log(`Sales: ${bookSales}`);
+
 // --^-- write your code here --^--
 
 /*
@@ -37,5 +55,21 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+
+// Part 3: Create the logBookData function
+function logBookData() {
+  console.log(`Title: ${bookTitle}`);
+  console.log(`Author: ${bookAuthor}`);
+  console.log(`Rating: ${bookRating}`);
+  console.log(`Sales: ${bookSales}`);
+}
+
+logBookData();
+
+bookSales += 10;
+logBookData();
+
+bookSales += 10;
+logBookData();
 
 // --^-- write your code here --^--
