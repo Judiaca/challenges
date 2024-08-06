@@ -38,3 +38,5 @@ function updateProgressBar() {
   progressBar.style.width = `${scrollPercentage}%`;
 }
 document.addEventListener("scroll", updateProgressBar);
+
+updateProgressBar();
