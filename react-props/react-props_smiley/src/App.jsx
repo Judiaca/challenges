@@ -1,5 +1,11 @@
 import "./App.css";
 
+// Define the Smiley component
+function Smiley({ isHappy }) {
+  // Render a happy or sad smiley based on the isHappy prop
+  return <h1>{isHappy ? "😊" : "😢"}</h1>;
+}
+
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Smiley isHappy={true} />; // Change the value to false to see the sad smiley
 }
