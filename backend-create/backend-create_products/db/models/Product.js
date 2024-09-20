@@ -1,13 +1,17 @@
 import mongoose from "mongoose";
-import "./Review";
 const { Schema } = mongoose;
 
+import "./Review"; // Import the Review model
+
 const productSchema = new Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  price: { type: Number, required: true },
-  currency: { type: String, required: true },
-  reviews: { type: [Schema.Types.ObjectId], ref: "Review" },
+  name: String,
+  description: String,
+  price: Number,
+  currency: String,
+  reviews: {
+    type: [Schema.Types.ObjectId],
+    ref: "Review",
+  },
 });
 
 const Product =

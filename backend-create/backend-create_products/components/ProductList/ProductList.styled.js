@@ -8,7 +8,7 @@ export const StyledHeading = styled.h2`
 export const StyledList = styled.ul`
   list-style-type: none;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-items: center;
   padding: 0;
 `;
