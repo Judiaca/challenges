@@ -1,0 +1,20 @@
+import mongoose from "mongoose";
+const { Schema } = mongoose;
+
+import "./Review"; // Import the Review model
+
+const productSchema = new Schema({
+  name: String,
+  description: String,
+  price: Number,
+  currency: String,
+  reviews: {
+    type: [Schema.Types.ObjectId],
+    ref: "Review",
+  },
+});
+
+const Product =
+  mongoose.models.Product || mongoose.model("Product", productSchema);
+
+export default Product;

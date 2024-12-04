@@ -1,5 +1,12 @@
-import { products } from "../../../lib/products";
+import dbConnect from "../../../db/connect";
+import Product from "../../../db/models/Product";
 
-export default function handler(request, response) {
-  return response.status(200).json(products);
+export default async function handler(req, res) {
+  await dbConnect();
+  if (req.method === "GET") {
+    const products = await Product.find({});
+    res.status(200).json(products);
+  } else {
+    res.status(405).end(); // Method Not Allowed
+  }
 }
